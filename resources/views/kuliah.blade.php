@@ -118,7 +118,7 @@
               <div class="card-body pt-0">
                 <!--The calendar -->
                 <h1>Ga banyak, cuma mau ngomong ini susah banget 😊</h1>
-                <h6>Punya Elang</h6>
+                <h6>Punya Elang P</h6>
               </div>
               <!-- /.card-body -->
             </div>
