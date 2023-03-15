@@ -122,6 +122,26 @@
               </div>
               <!-- /.card-body -->
             </div>
+
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">id</th>
+                  <th scope="col">Experience</th>
+                  <th scope="col">Achievment</th>
+                </tr>
+              </thead>
+              @foreach ($data_exps as $item)
+              <tbody>
+                <tr>
+                  <td>{{$item['id']}}</td>
+                  <td>{{$item['experience']}}</td>
+                  <td>{{$item['achievment']}}</td>
+                </tr>
+              </tbody>
+              @endforeach
+            </table>
+
             <!-- /.card -->
           </section>
           <!-- right col -->
