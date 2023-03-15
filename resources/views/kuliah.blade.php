@@ -96,7 +96,7 @@
           <section class="col-lg">
 
             <!-- Calendar -->
-            <div class="card bg-gradient-primary">
+            <div class="card bg-gradient-danger">
               <div class="card-header border-0">
 
                 <h3 class="card-title">
@@ -105,10 +105,10 @@
                 </h3>
                 <!-- tools card -->
                 <div class="card-tools">
-                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse">
+                  <button type="button" class="btn btn-danger btn-sm" data-card-widget="collapse">
                     <i class="fas fa-minus"></i>
                   </button>
-                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="remove">
+                  <button type="button" class="btn btn-danger btn-sm" data-card-widget="remove">
                     <i class="fas fa-times"></i>
                   </button>
                 </div>
@@ -117,8 +117,31 @@
               <!-- /.card-header -->
               <div class="card-body pt-0">
                 <!--The calendar -->
-                <h1>Ga banyak, cuma mau ngomong ini susah banget 😊</h1>
-                <h6>Punya Elang P</h6>
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">ID</th>
+                      <th scope="col">Experience</th>
+                      <th scope="col">Achievment</th>
+                      <th scope="col">Profile</th>
+                      
+                    </tr>
+                  </thead>
+                  @foreach ($data_exps as $item)
+                  <tbody>
+                    <tr>
+                      <td>{{$item['id']}}</td>
+                      <td>{{$item['experience']}}</td>
+                      <td>{{$item['achievment']}}</td>
+                      @if($item['id'] == 1)
+                          <td><a href="/profile/profile1" style="color: white;">Profile Elang<a></td>
+                        @else
+                          <td><a href="/profile/profile2" style="color: white;">Profile Bagus<a></td>
+                        @endif
+                    </tr>
+                  </tbody>
+                  @endforeach
+                </table>
               </div>
               <!-- /.card-body -->
             </div>

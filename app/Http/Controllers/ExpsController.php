@@ -16,6 +16,6 @@ class ExpsController extends Controller
     public function index()
     {
         $data_exps=exps::all();
-        return view('dashboard',compact('data_exps'));
+        return view('kuliah',compact('data_exps'));
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ExpsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PengalamanController;
@@ -19,6 +20,9 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('/pengalaman', [ExpsController::class, 'index']) -> name('kuliah');
+
+// Route::resource('dashboard', ExpsController::class);
 Route::get('/profile/{profile?}', [ProfileController::class,'profile']);
 
-Route::get('/pengalaman', [PengalamanController::class, 'pengalaman'])->name('kuliah');
+// Route::get('/pengalaman', [PengalamanController::class, 'pengalaman'])->name('kuliah');
