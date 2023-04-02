@@ -13,7 +13,7 @@
           <img src="/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Elang Putra Adam</a>
+          <a href="#" class="d-block">{{$user->name}}</a>
         </div>
       </div>
 
@@ -25,7 +25,7 @@
           <li class="nav-item menu-open">
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/" class="nav-link">
+                <a href="/dashboard" class="nav-link">
                   <p>Dashboard</p>
                 </a>
               </li>
@@ -45,6 +45,16 @@
                 </a>
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+                  document.getElementById('logout-form').submit();">
+              {{ __('logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+              @csrf
+            </form>
           </li>
         </ul>
       </nav>
